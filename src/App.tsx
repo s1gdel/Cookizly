@@ -50,6 +50,12 @@ function App() {
   "instructions": ["string (logical, step-by-step methods; assume common techniques if unclear)"],
   "cookingTime": "string (estimate based on dish complexity)",
   "servings": "number (default to 2 if unclear)",
+  "calories": "number (estimated total calories for the entire recipe)",
+  "macros": {
+    "carbs": "number (total carbohydrates in grams for the entire recipe)",
+    "protein": "number (total protein in grams for the entire recipe)",
+    "fat": "number (total fat in grams for the entire recipe)"
+  },
   "notes": {
     "assumptions": ["string (e.g., 'Assumed garlic was peeled')"],
     "substitutions": ["string (e.g., 'Can substitute butter for oil')"]
