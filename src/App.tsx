@@ -44,13 +44,17 @@ function App() {
 
       const prompt = `Analyze this image and generate a detailed recipe based on the visible ingredients. 
         Return ONLY a JSON response in this exact format (NO MARKDOWN, NO EXTRA TEXT):
-        { 
-          "title": string,
-          "ingredients": string[],
-          "instructions": string[],
-          "cookingTime": string,
-          "servings": number 
-        }`;
+        {
+  "title": "string (creative/descriptive name based on ingredients)",
+  "ingredients": ["string (include estimated quantities, e.g., '1/2 onion, diced')"],
+  "instructions": ["string (logical, step-by-step methods; assume common techniques if unclear)"],
+  "cookingTime": "string (estimate based on dish complexity)",
+  "servings": "number (default to 2 if unclear)",
+  "notes": {
+    "assumptions": ["string (e.g., 'Assumed garlic was peeled')"],
+    "substitutions": ["string (e.g., 'Can substitute butter for oil')"]
+  }
+}`;
 
       const result = await model.generateContent([
         {
