@@ -42,7 +42,7 @@ function App() {
 
       const base64Data = capturedImage.split(',')[1];
 
-      const prompt = `Analyze this image and generate a recipe based on the visible ingredients. 
+      const prompt = `Analyze this image and generate a detailed recipe based on the visible ingredients. 
         Return ONLY a JSON response in this exact format (NO MARKDOWN, NO EXTRA TEXT):
         { 
           "title": string,
